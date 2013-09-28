@@ -7,6 +7,7 @@ class SubscriptionForm(forms.ModelForm):
 
     class Meta:
         model = Subscription
+        exclude = ('paid')
         fields = ('name', 'cpf', 'email', 'phone')
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
